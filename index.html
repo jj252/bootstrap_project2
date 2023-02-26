@@ -1,85 +1,246 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <!-- Required meta tags always come first -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- build:css css/main.css -->
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
-    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <!-- endbuild -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;900&display=swap" rel="stylesheet">
-
-    <title>Super Simple Sample Site - Home</title>
-</head>
+    <head>
+        <!-- Required meta tags always come first -->
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+        <!-- Additional CSS must be placed after Bootstrap CSS -->
+        <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" />
+        <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css" />
+        <!-- Additional CSS must be placed after Bootstrap CSS -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" />
+        <link rel="stylesheet" href="css/styles.css" />
+        <title>Jeremy Jeremiah Portfolio</title>
+    </head>
 
 <body>
-
-    <header class="jumbotron jumbotron-fluid">
-        <img src="img/header.png" class="mx-auto d-block img-fluid" />
-    </header>
-
-    <nav class="navbar navbar-expand-sm navbar-dark sticky-top">
+    
+    <div class="col-6 col-sm-5 text-center">
+        
+        <a id="social_instagram" class="btn btn-social-icon btn-instagram" href="http://instagram.com/"><i class="fa fa-instagram"></i></a>
+        <a id="social_facebook" class="btn btn-social-icon btn-facebook" href="https://www.facebook.com/profile.php?id=100079475780193"><i class="fa fa-facebook"></i></a>
+        <a id="social_twitter" class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+        <a id="social_youtube" class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+        <a id="social_linkedin" class="btn btn-social-icon btn-linkedin" href="https://www.linkedin.com/in/jeremy-jeremiah-50b7b4238/"><i class="fa fa-linkedin"></i></a>
+    </div>
+    <header class="jumbotron jumbotron-fluid grad">
         <div class="container">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-around" id="myNavbar">
-                <ul class="navbar-nav justify-content-center">
-                    <li class="nav-item active"><a class="nav-link" href="#">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                </ul>
+            <div class="row">
+                <div class="col-4 col-sm-3 col-md-2 align-self-center">
+                    <img src="img/jjlogo4.png" class="img-fluid" />
+                </div>
+                
+                <div class="col">
+                    <h1 id="main_header" class="logo-1">Jeremy Jeremiah</h1>
+                    <h2 id="primary_header" class="blink_me">Personal Portfolio Page</h2>
+                </div>
+            </div>
+        </div>
+           
+    </header>
+    <nav class="navbar navbar-expand-sm navbar-dark bg-primary sticky-top">
+        <div class="container-fluid p-0">
+            <div class="row">
+                <div class="col col-xs-6 col-sm-6">
+                    <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#nucampNavbar">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="nucampNavbar">
+                        <ul class="navbar-nav">
+                            <li class="nav-item active"><a class="nav-link link_small" href="#"><i class="fa fa-home fa-lg"></i> Home</a></li>
+                            <li class="nav-item "><a class="nav-link link_small" id="aboutme" href="#"><i class="fa fa-info fa-lg"></i> About</a></li>
+                            <li class="nav-item"><a class="nav-link link_small" id="education" href="#"><i class="fa fas fa-university"></i> Education</a></li>
+                            <li class="nav-item"><a class="nav-link link_small" id="projects" href="#"><i class="fa fal fa-tasks"></i> Projects</a></li>
+                        </ul>
+                        
+                    </div>
+                </div>
             </div>
         </div>
     </nav>
 
-    <div class="container main-container">
+    <div class="container">
         <div class="row">
-            <div class="col text-center">
-                <p>This is a sample site to demonstrate a static Bootstrap website deployment from a build folder.</p>
-                <a id="testBtn" role="button" class="btn btn-lg btn-info">Click to Test JavaScript</a>
+            <div class="col-6">
+                <div id="homeCarousel" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators mb-5">
+                        <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#homeCarousel" data-slide-to="1"></li>
+                        <li data-target="#homeCarousel" data-slide-to="2"></li>
+                    </ol>
+                    <div id="inner" class="carousel-inner to_front">
+                        <div class="carousel-item active" id="web">
+                            <img id="web_img" class="d-block w-100" src="img/breadcrumb-trail.jpg" alt="Breadcrumb Trail Campground" />
+                            <div id="web_div" class="carousel-caption new_cap">
+                                <h3>Website Projects</h3>
+                            </div>
+                    </div>
+                    
+                    <div class="carousel-item to_front" id="about">
+                            <img id="about_img" class="d-block w-100" src="img/react-lake.jpg" alt="React Lake Campground" />
+                            <div id="about_div" class="carousel-caption new_cap">
+                                <h3>About Me</h3>
+                                
+                            </div>
+                    </div>
+                    
+                    <div class="carousel-item to_front" id="edu">
+                            <img id="edu_img" class="d-block w-100" src="img/chrome-river.jpg" alt="Chrome River Campground" />
+                            <div id="edu_div" class="carousel-caption new_cap">
+                                <h3>Education</h3>
+                                
+                            </div>
+                    </div>
+                    
+                    
+                </div>
+                        <a class="carousel-control-prev" href="#homeCarousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#homeCarousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                        <button class="btn btn-sm" id="c">
+                            <i class="fa "></i>
+                        </button>
+
+                        <button class="btn btn-danger btn-sm offset-8" id="carouselButton">
+                            <i class="fa fa-pause"></i>
+                        </button>  
+                </div>
+            </div>
+            <div id="about_section" class="col col-sm-6 section2 fade-in">
+                <div class="col fadein_class">
+                    <div class="media">
+                        <img id="about_skills" class="d-flex mr-3 img-thumbnail" src="img/new.jpg" alt="Bootstrap Outfitters" />
+                        <div class="media-body align-self-center">
+                            <h3 id="about_jj" class="text-white logo-2">About Jeremy Jeremiah</h3>
+                            <p class="d-none d-sm-block text-white small">Hover image to see skills</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="edu_section" class="col col-sm-6 section mb-5 p-0 fadein_class">
+                <h1 class="mb-9 text-white logo-2">Jeremy's Education</h1>
+                    <div class="col-sm-6">
+                        
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr class="bg-primary text-light">
+                                        <th></th>
+                                        <th>Courses</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="table-primary">
+                                    <tr>
+                                        <th id="head_clink" class="">Nucamp Coding Bootcamp</th>
+                                        <td><a id="course_link">Hover over me</a></td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <th id="head_clink2" class="">DeVry University</th>
+                                        <td><a id="course_link2">Hover over me</a></td>
+                                        
+                                    </tr>
+                                    <tr>
+                                        <th id="head_clink3" class="">Cisco Networking Academy</th>
+                                        <td><a id="course_link3">Hover over me</a></td>
+                                        
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>                
+                    </div>
+            </div>
+            <div id="pro_section" class="col col-sm-6 section fade-in fadein_class">
+                <h1 class="text-white logo-2 blink_me">Jeremy's Projects</h1>
+                <div class="col">
+                    
+                    <div id="accordion">
+                        <div class="card">
+                            <div role="tab" class="card-header grad text-white">
+                                <h4>
+                                    <a id="accordion1" class="text-white small" data-toggle="collapse" data-target="#bootstrap">
+                                        Who Wants to be a Millionaire <small>Python Game(Hover)</small>
+                                    </a>
+                                </h4>
+                                <div class="collapse show" id="bootstrap" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <p class="d-none d-sm-block text-white small"><a href="under_construction.html">https://github.com/jj252/millyxxx</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div role="tab" class="card-header grad text-white">
+                                <h4>
+                                    <a id="accordion2" class="collapsed text-white small" data-toggle="collapse" data-target="#git">
+                                        Find The Imposter <small>html/javascript/css game(Hover)</small>
+                                    </a>
+                                </h4>
+                                <div class="collapse" id="git" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <p class="d-none d-sm-block small"><a href="under_construction.html2">https://github.com/jj252/htmlcssjavascriptxxx</a></p>
+                                   </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div role="tab" class="card-header grad text-white">
+                                <h4>
+                                    <a id="accordion3" class="collapsed text-white small" data-toggle="collapse" data-target="#mongo">
+                                        Franchise <small>Backend Developement Project(Hover)</small>
+                                    </a>
+                                </h4>
+                                <div class="collapse text-white" id="mongo" data-parent="#accordion">
+                                    <div class="card-body">
+                                        <p class="d-none d-sm-block small"><a href="under_construction2.html">https://github.com/jj252/franchisexxx</a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
             </div>
         </div>
     </div>
-
-    <div id="testModal" class="modal fade" role="dialog">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h3 class="modal-title">Test Passed</h3>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+    <div class="container container-fluid grad">
+         <div class="row">
+             <div class="col-4 col-sm-2 offset-1">
+                 <h5 class="text-white">Links</h5>
+                 <ul class="list-unstyled text-white">
+                     <li><a href="#">Home</a></li>
+                     <li id="aboutme2"><a href="#">About</a></li>
+                     <li id="education2"><a href="#">Education</a></li>
+                     <li id="projects2"><a href="#">Projects</a></li>
+                 </ul>
+             </div>
+             <div class="col-6 col-sm-5 text-center">
+                 <h5 class="text-white">Social</h5>
+                 <a id="social_instagram2" class="btn btn-social-icon btn-instagram" href="http://instagram.com/"><i class="fa fa-instagram"></i></a>
+                 <a id="social_facebook2" class="btn btn-social-icon btn-facebook" href="https://www.facebook.com/profile.php?id=100079475780193"><i class="fa fa-facebook"></i></a>
+                 <a id="social_twitter2" class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
+                 <a id="social_youtube2" class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                 <a id="social_linkedin2" class="btn btn-social-icon btn-linkedin" href="https://www.linkedin.com/in/jeremy-jeremiah-50b7b4238/"><i class="fa fa-linkedin"></i></a>
                 </div>
-                <div class="modal-body">
-                    <p>If you see this, JavaScript is working.</p>
-                </div>
-            </div>
+             
         </div>
-    </div>
+     </div>
+    
+</body>
 
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col text-center">
-                    <a class="btn btn-social-icon btn-instagram" href="http://instagram.com/"><i class="fa fa-instagram"></i></a>
-                    <a class="btn btn-social-icon btn-facebook" href="http://facebook.com/"><i class="fa fa-facebook"></i></a>
-                    <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- jQuery must come first, then Popper.js, then the Bootstrap JavaScript plugins.-->
-    <!-- build:js js/main.js -->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
-    <!-- endbuild -->
+    
 
 </body>
 
